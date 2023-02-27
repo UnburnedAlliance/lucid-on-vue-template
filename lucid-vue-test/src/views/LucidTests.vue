@@ -33,12 +33,6 @@ export default {
 </script>
 
 <script setup>
-defineProps({
-  msg: {
-    type: String,
-    required: true
-  }
-})
 </script>
 
 <style lang="scss">
@@ -79,7 +73,7 @@ defineProps({
   padding: 2em;
 }
 
-p, h1, h2, h3 { 
+p, h1, h2, h3, code { 
   margin-bottom: 1em;
 }
 </style>

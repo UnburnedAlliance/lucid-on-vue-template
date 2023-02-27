@@ -38,7 +38,7 @@
   padding: 2em;
 }
 
-p, h1, h2, h3 { 
+p, h1, h2, h3, code { 
   margin-bottom: 1em;
 }
 

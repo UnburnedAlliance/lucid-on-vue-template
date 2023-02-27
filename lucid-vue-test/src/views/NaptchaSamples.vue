@@ -22,14 +22,6 @@ export default {
 }
 </script>
 
-<script setup>
-defineProps({
-  msg: {
-    type: String,
-    required: true
-  }
-})
-</script>
 
 <style>
 h1 {

@@ -10,5 +10,10 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  experiments: {
+    "asyncWebAssembly": true,
+    "topLevelAwait": true,
+    "layers": true // optional, with some bundlers/frameworks it doesn't work without
   }
 })

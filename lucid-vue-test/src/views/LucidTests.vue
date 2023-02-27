@@ -1,18 +1,24 @@
 <template>
   <div class="lucid">
     <h1>{{lucidtest}}</h1>
-    <div class="subline">
-    <HelloWorld msg="Docs Walkthrough" />
+    <div class="lessonbox">
+    <About_Import />
     </div>
+    <div class="prevlink">
+    <RouterLink to="/"></RouterLink>
+  </div>
+    <div class="nextlink">
+    <RouterLink to="/getstarted">Get Started</RouterLink>
+  </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from '../components/HelloWorld.vue'
+import About_Import from './Overview.vue'
 export default {
   data() {
     return {
-      lucidtest: "Lucid Testing",
+      lucidtest: "Lucid Tutorial",
     }
   },
   methods: {
@@ -21,7 +27,7 @@ export default {
     },
   },
   components: {
-    HelloWorld,
+    About_Import
   },
 }
 </script>
@@ -35,13 +41,45 @@ defineProps({
 })
 </script>
 
-<style>
-.subline {
-  color: green !important;
-  text-decoration: wavy;
+<style lang="scss">
+:root {
+  --lightbg: #35363a;
+  --darkbg: #181818;
+}
+
+.nextlink {
+  float: right;
+  font-size: 1.5em;
+  padding-right: 2em;
+}
+
+.prevlink {
+  float: left;
+  font-size: 1.5em;
+  padding-left: 2em;
+}
+
+.lesson {
+  border: 15px solid yellow;
+  border-color: rgba(255, 255, 0, 0.15);
+  margin: 2em auto;
+  background-color: var(--lightbg);
+  border-radius: 2em;
+  padding: 2em;
+}
+
+.lessonbox {
+  margin: 2em auto;
+  background-color: var(--lightbg);
+  border-radius: 2em;
+  padding: 2em;
 }
 
 .lucid {
-  padding: 1em;
+  padding: 2em;
+}
+
+p, h1, h2, h3 { 
+  margin-bottom: 1em;
 }
 </style>

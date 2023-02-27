@@ -8,11 +8,9 @@ defineProps({
 </script>
 
 <template>
-  <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
-     Refer to <a href="https://lucid.spacebudz.io/docs/overview/about-lucid/">Lucid documentation</a> for more.
-    </h3>
+  <div class="headline">
+    <h3>{{ msg }}</h3>
+
   </div>
 </template>
 

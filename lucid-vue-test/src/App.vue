@@ -8,8 +8,10 @@ import HelloWorld from './components/HelloWorld.vue'
     <img alt="Vue logo" class="logo" src="https://lucid.spacebudz.io/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld msg="LUCID-CARDANO" />
-
+     <h1>LUCID-CARDANO</h1>
+      <h3>
+     This web app is a working recap of the material provided by the <a href="https://lucid.spacebudz.io/docs/overview/about-lucid/">Lucid documentation</a> on a Vue3 framework.
+    </h3>
       <nav>
         <RouterLink to="/lucid">Library Explanation</RouterLink>
         <RouterLink to="/naptcha">Advanced Example</RouterLink>
@@ -22,10 +24,16 @@ import HelloWorld from './components/HelloWorld.vue'
 </template>
 
 <style scoped>
+
+
 header {
   line-height: 1.5;
   max-height: 100vh;
   text-align: center; 
+}
+
+h1 {
+  margin-bottom: .5em;
 }
 
 .logo {
@@ -66,7 +74,7 @@ nav a:first-of-type {
 
 @media (min-width: 1024px) {
   header {
-    display: grid;
+    padding-top: 1em;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
     padding-left: calc(var(--section-gap) / 2);
@@ -74,13 +82,13 @@ nav a:first-of-type {
   }
 
   .logo {
-    margin-bottom: 2em;
+    margin: 2em auto;
   }
 
   header .wrapper {
     display: grid;
-    place-items: flex-start;
     flex-wrap: wrap;
+    max-width: 300px;
   }
 
   nav {

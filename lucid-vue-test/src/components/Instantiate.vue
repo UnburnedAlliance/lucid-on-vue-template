@@ -1,19 +1,16 @@
 <script type="module">
-/*
 import { Lucid, Blockfrost } from "../../node_modules/lucid-cardano";
 
 const lucid = await Lucid.new(
- await new Blockfrost("https://cardano-preprod.blockfrost.io/api/v0", "mainnetZLfKC8wgc5vNbe31vGt5sK6u8lQxoNxm"),
-  "Preview",
-);*/
+ await new Blockfrost("https://cardano-mainnet.blockfrost.io/api/v0", "mainnetZLfKC8wgc5vNbe31vGt5sK6u8lQxoNxm"),
+  "Mainnet",
+);
 
-import { Lucid } from "../../node_modules/lucid-cardano";
-const lucid = await Lucid.new();
 
 export default {
   data() {
     return {
-      lucidAPI: lucid,
+      lucidAPI: "fuck",
       connectmsg: "Connect",
       walletname: "UNK",
       walletbal: "UNK",
@@ -23,7 +20,10 @@ export default {
   methods: {
     connectWallet: function () {
       console.log('connectWallet function')
-      this.cardapi = window.cardano.nami.enable();
+      let cardapi = window.cardano.nami.enable();
+      console.log("cardapi:");
+      console.log(cardapi);
+      this.walletname = window.cardano.nami.name;
       console.log(window.cardano.nami.isEnabled());  
       console.log(window.cardano.nami.name) 
     }
@@ -34,7 +34,7 @@ export default {
       console.log("cardano enabled.")
       this.connectmsg = "Connected to ".concat(window.cardano.nami.name);
       this.walletname = window.cardano.nami.name;
-      this.walletbal = window.cardano.getBalance();
+      this.walletbal = "TBD";
       console.log('getBalance....');
       console.log(cardano.getUsedAddresses());
     }

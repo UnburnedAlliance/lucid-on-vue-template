@@ -2,41 +2,40 @@
 import { Lucid, Blockfrost } from "../../node_modules/lucid-cardano";
 
 const lucid = await Lucid.new(
- await new Blockfrost("https://cardano-mainnet.blockfrost.io/api/v0", "mainnetZLfKC8wgc5vNbe31vGt5sK6u8lQxoNxm"),
-  "Mainnet",
+ await new Blockfrost("https://cardano-mainnet.blockfrost.io/api/v0", "mainnetZLfKC8wgc5vNbe31vGt5sK6u8lQxoNxm"), "Mainnet",
 );
 
+const alreadyEnabled = await window.cardano.isEnabled();
+//const wtf = await window.cardano.nami.enable();
 
 export default {
   data() {
     return {
-      lucidAPI: "fuck",
+      lucidAPI: lucid,
       connectmsg: "Connect",
       walletname: "UNK",
       walletbal: "UNK",
-      cardapi: undefined,
     }
   },
   methods: {
     connectWallet: function () {
       console.log('connectWallet function')
-      let cardapi = window.cardano.nami.enable();
-      console.log("cardapi:");
-      console.log(cardapi);
-      this.walletname = window.cardano.nami.name;
-      console.log(window.cardano.nami.isEnabled());  
+      const api = window.cardano.nami.enable();
+      this.lucidAPI.selectWallet(api);
+      this.walletname = this.lucidAPI.network;
+      console.log(this.lucidAPI);  
       console.log(window.cardano.nami.name) 
     }
   },
   mounted() {
     console.log('mounted section');
-    if(window.cardano.nami.isEnabled()) {
+    if(alreadyEnabled) {
       console.log("cardano enabled.")
       this.connectmsg = "Connected to ".concat(window.cardano.nami.name);
       this.walletname = window.cardano.nami.name;
       this.walletbal = "TBD";
       console.log('getBalance....');
-      console.log(cardano.getUsedAddresses());
+      console.log(window.cardano.getUsedAddresses());
     }
     
   },

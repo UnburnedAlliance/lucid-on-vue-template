@@ -15,11 +15,6 @@ const router = createRouter({
       component: () => import('../views/LucidTests.vue')
     },
     {
-      path: '/about',
-      name: 'about',
-      component: () => import('../views/Overview.vue')
-    },
-    {
       path: '/getstarted',
       name: 'getstarted',
       component: () => import('../views/GettingStarted.vue')

@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import About_Import from './Overview.vue'
+import About_Import from '../components/About_Import.vue'
 export default {
   data() {
     return {
@@ -32,8 +32,6 @@ export default {
 }
 </script>
 
-<script setup>
-</script>
 
 <style lang="scss">
 :root {

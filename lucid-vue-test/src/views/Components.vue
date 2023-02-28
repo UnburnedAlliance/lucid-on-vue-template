@@ -5,6 +5,7 @@
   <div class="lucid">
     <h1>Components</h1>
     <div class="lessonbox">
+      
     </div>
     <div class="prevlink">
     <RouterLink to="/getstarted">&lt; Get Started</RouterLink>

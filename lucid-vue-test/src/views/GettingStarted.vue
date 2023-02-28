@@ -1,7 +1,7 @@
 <script>
-import Instantiating from './InstantiateLucid.vue';
-import CreateWallet from './CreateWallet.vue';
-import BuildTx from './BuildTx.vue'
+import Instantiate from '../components/Instantiate.vue';
+import CreateWallet from '../components/CreateWallet.vue';
+import BuildTx from '../components/BuildTx.vue'
 export default {
   data() {
     return {
@@ -9,7 +9,7 @@ export default {
     }
   },
   components: {
-    Instantiating,
+    Instantiate,
     CreateWallet,
     BuildTx
   },
@@ -20,7 +20,7 @@ export default {
   <div class="lucid">
     <h1>Getting Started</h1>
     <div class="lessonbox">
-      <Instantiating />
+      <Instantiate />
       <CreateWallet />
       <BuildTx />
     </div>

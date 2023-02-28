@@ -27,6 +27,11 @@
   padding: 2em;
 }
 
+button {
+  background: rgb(65,250,74);
+background: linear-gradient(180deg, rgba(65,250,74,1) 0%, rgba(134,135,86,1) 98%, rgba(219,215,154,1) 100%);
+}
+
 .lessonbox {
   margin: 2em auto;
   background-color: var(--lightbg);
